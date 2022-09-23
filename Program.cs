@@ -1,81 +1,181 @@
-﻿namespace ConsoleApp1
+﻿using System.Reflection.Metadata;
+
+namespace ConsoleApp1
 {
-    internal static class Program
+    internal static class Calculator
     {
-        private static void Main(string[] args)
+        private const string Divide = "/";
+        private const string Multiply = "*";
+        private const string Add = "+";
+        private const string Subtract = "-";
+
+        public static void Main(string[] args)
         {
-            string? answer;
+            Console.WriteLine("******************************");
+            Console.WriteLine("Welcome to My First Calculator");
+            Console.WriteLine("******************************");
+
+            string option;
             do
             {
-                Console.Clear();
-                int result;
-                
-                
-                Console.WriteLine("******************************\nWelcome to MyFirst Calculator!\n******************************");
-                Console.WriteLine("Press ENTER to continue");
-                Console.ReadLine();
+                Console.WriteLine();
+                Console.WriteLine("1 for -> Basic Calculator");
+                Console.WriteLine("2 for -> Tip Calculator");
+                Console.WriteLine("0 for -> Exit");
+                Console.WriteLine();
+                Console.WriteLine("Please Enter Your Selection");
 
-                Console.WriteLine("Please enter your First Number:");
-                var num1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Please enter Operator (/,*,+,-): ");
-                var operation = Console.ReadLine();
+                option = Console.ReadLine();
+                Console.WriteLine();
 
-                while(operation != "/" && operation != "*"&& operation !="+" && operation !="-")
+                switch (option)
                 {
-                    Console.WriteLine("Wrong Input. Please enter one of the following operators(/,*,+,-)");
-                    operation = Console.ReadLine();
+                    case "1" :
+                        BasicOperation();
+                        break;
+                    case "2":
+                        TipOperation();
+                        break;
+                    case "0":
+                        break;
+                    default:
+                        Console.WriteLine("**Invalid Input. Please select valid option**");
+                        break;
                 }
+            } while (option != "0");
+        }
 
-                Console.WriteLine("Please enter your Second Number:");
-                var num2 = Convert.ToInt32(Console.ReadLine());
-               
-
-                switch (operation)
-                {
-                    case "+":
-                        result = num1 + num2;
-                        Console.WriteLine("Addition:" + result);
-                        break;
-
-                    case "-":
-                        result = num1 - num2;
-                        Console.WriteLine("Subtraction:" + result);
-                        break;
-
-                    case "*":
-                        result = num1 * num2;
-                        Console.WriteLine("Multiplication:" + result);
-                        break;
-
-                    case "/":
-                        result = num1 / num2;
-                        Console.WriteLine("Division:" + result);
-                        break;
-
-                    // default:
-                    //     Console.WriteLine("Wrong Input");
-                    //     break;
-
-                }
-
-                Console.ReadLine();
-                Console.WriteLine("Do yo want to Continue(Press y for Yes and Press n for No)");
-                answer = Console.ReadLine();
-            }
-            while (answer is "y" or "Y");
+        private static void BasicOperation()
+        {
+            var number1 = GetNumber("Enter Your First Number: ");
+            var operation = GetOperator();
+            var number2 = GetNumber("Enter Second Number: ");
             
-            Console.WriteLine("Thank you fo using My First Calculator with C#");
-           
+            while (operation == Divide && number2 == 0)
+            {
+                Console.WriteLine("\n** Enter Valid Value. It can't be 0");
+                number2 = GetNumber("Enter Second Number: ");
+            }
 
-
-
-
-           
-
-
+            var result = operation switch
+            {
+                Divide => number1 / number2,
+                Multiply => number1 * number2,
+                Add => number1 + number2,
+                Subtract => number1 + number2, 
+                // => 0
+                
+            };
+            
+            Console.WriteLine();
+            Console.WriteLine("Your Result: " + result);
 
         }
 
-    }
+        private static void TipOperation()
+        {
+            var amount = GetNumber("Enter Amount: $");
+            string opt;
+            do
+            {
+                Console.WriteLine("Enter *1* for 18%");
+                Console.WriteLine("Enter *2* for 20%");
+                Console.WriteLine("Enter *3* for 25%");
+                Console.WriteLine("Please Enter Your Selection");
+                opt = Console.ReadLine();
 
+                switch (opt)
+                {
+                    case "1":
+                    Console.WriteLine("Your Tip amount is: $" +((amount * 18)/100) );
+                        break;
+                    case "2":
+                        Console.WriteLine("Your Tip amount is: $" +((amount * 20)/100) );
+                        break;
+                    case "3":
+                        Console.WriteLine("Your Tip amount is: $" +((amount * 25)/100) );
+                        break;
+                    default:
+                        Console.WriteLine("\n** Invalid Option. Try Again **\n");
+                        opt = "0";
+                        break; 
+                }
+
+            } while (opt == "0");
+        }
+
+        private static decimal GetNumber(string message)
+        {
+            decimal number;
+            Console.Write(message);
+            try
+            {
+                number = Convert.ToDecimal(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("\n** Invalid Value. Try Again **\n");
+                return GetNumber(message);
+            }
+
+            return number;
+        }
+
+        private static string GetOperator()
+        {
+            Console.Write("Enter one of the following Operators (/,*,+,-): ");
+            var sign = Console.ReadLine();
+
+            switch (sign)
+            {
+                case Divide:
+                case Multiply:
+                case Add:
+                case Subtract:
+                    break;
+                default:
+                    Console.WriteLine("\n** Invalid Input. Select Valid Operator **\n");
+                    sign = GetOperator();
+                    break;
+            }
+
+            return sign;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
+

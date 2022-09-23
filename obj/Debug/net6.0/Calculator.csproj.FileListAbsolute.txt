@@ -1,0 +1,15 @@
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/bin/Debug/net6.0/Calculator
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/bin/Debug/net6.0/Calculator.deps.json
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/bin/Debug/net6.0/Calculator.runtimeconfig.json
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/bin/Debug/net6.0/Calculator.dll
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/bin/Debug/net6.0/Calculator.pdb
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.csproj.AssemblyReference.cache
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfoInputs.cache
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfo.cs
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.csproj.CoreCompileInputs.cache
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.dll
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/refint/Calculator.dll
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.pdb
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/Calculator.genruntimeconfig.cache
+/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/obj/Debug/net6.0/ref/Calculator.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ed5HAljsFnD/Xq9vxHT8mKbmayWlNu6PQc9pmf//LTCbrfCV97KwZU7w0GFhlcLaoFdZqxYXWa/rNg5cxugh6g==",
+  "dgSpecHash": "H0J5G1MqIKNvaHfKPz0cjxB4CAg8a+nKkKBcbPPJGVAgp+5tGo65WANRpYV9GyNCmFzmKx6Yw3JWICl25Ke4cw==",
   "success": true,
-  "projectFilePath": "/Users/ulakurambayev/RiderProjects/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+  "projectFilePath": "/Users/ulakurambayev/RiderProjects/ConsoleApp1/Calculator/Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
