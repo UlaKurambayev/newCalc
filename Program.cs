@@ -63,7 +63,7 @@ namespace ConsoleApp1
                 Multiply => number1 * number2,
                 Add => number1 + number2,
                 Subtract => number1 + number2, 
-                // => 0
+                
                 
             };
             
@@ -74,7 +74,7 @@ namespace ConsoleApp1
 
         private static void TipOperation()
         {
-            var amount = GetNumber("Enter Amount: $");
+            var amount = GetNumber("Enter Bill Amount: $");
             string opt;
             do
             {
